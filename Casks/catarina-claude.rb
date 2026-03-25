@@ -29,6 +29,9 @@ cask "catarina-claude" do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/Catarina Claude.app"],
                    sudo: false
+    system_command "/usr/bin/open",
+                   args: ["#{appdir}/Catarina Claude.app"],
+                   sudo: false
   end
 
   zap trash: [

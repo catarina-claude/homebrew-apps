@@ -1,12 +1,12 @@
 cask "catarina-claude" do
-  version "0.1.7"
+  version "0.2.0"
 
   if Hardware::CPU.arm?
     url "https://github.com/catarina-claude/catarina-claude.github.io/releases/download/v#{version}/catarina-claude-#{version}-macos-arm64.dmg"
-    sha256 "124148c8c0357812671f74017e4a69558ea3deed9f5c1baf27e6408c923bff03"
+    sha256 "718b2ce710f8be959f790bda02e38e87f59c9f7cadfe7da51125cab656cf24c5"
   else
     url "https://github.com/catarina-claude/catarina-claude.github.io/releases/download/v#{version}/catarina-claude-#{version}-macos-x64.dmg"
-    sha256 "5446a6a99fb7fc3c5835a93251edf2b1b7310bc32427c4c3e5db62ed3769abe5"
+    sha256 "f3167b0c87fc4f81154df6567ff3bd465b1c9542e2089536aaf15472b4eb8a9a"
   end
 
   name "Catarina Claude"

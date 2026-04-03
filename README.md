@@ -1,18 +1,18 @@
-# Catarina Claude Homebrew Tap
+# Cadente Homebrew Tap
 
-Homebrew cask for installing [Catarina Claude](https://catarina-claude.github.io) on macOS.
+Homebrew cask for installing [Cadente](https://cadente-hub.github.io) on macOS.
 
 ## Install
 
 ```bash
-brew tap catarina-claude/apps
-brew install --cask catarina-claude
+brew tap cadente-hub/apps
+brew install --cask cadente
 ```
 
 ## Update
 
 ```bash
-brew upgrade --cask catarina-claude
+brew upgrade --cask cadente
 ```
 
 The app also includes built-in auto-updates that notify you when a new version is available.
@@ -20,5 +20,5 @@ The app also includes built-in auto-updates that notify you when a new version i
 ## Uninstall
 
 ```bash
-brew uninstall --cask catarina-claude
+brew uninstall --cask cadente
 ```

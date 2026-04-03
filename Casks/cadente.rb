@@ -23,6 +23,17 @@ cask "cadente" do
 
   app "Cadente.app"
 
+  # Remove macOS quarantine flag so the app opens without Gatekeeper warnings
+  # (required for apps not signed with an Apple Developer certificate)
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Cadente.app"],
+                   sudo: true
+    system_command "/usr/bin/open",
+                   args: ["#{appdir}/Cadente.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Application Support/com.cadente.app",
     "~/Library/Caches/com.cadente.app",

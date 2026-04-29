@@ -23,6 +23,17 @@ cask "cadente" do
 
   app "Cadente.app"
 
+  # Strip macOS quarantine so the app opens without "is damaged" Gatekeeper error.
+  # Required for unsigned apps — works on both Intel and Apple Silicon (incl. M4).
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Cadente.app"],
+                   sudo: true
+    system_command "/usr/bin/open",
+                   args: ["#{appdir}/Cadente.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Application Support/com.cadente.app",
     "~/Library/Caches/com.cadente.app",
